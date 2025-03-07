@@ -1,0 +1,17 @@
+@startuml
+start
+
+:获取所有唯一词语;
+:创建特征向量（vec1 和 vec2）;
+:计算点积（dotProduct）;
+:计算向量模长（norm1 和 norm2）;
+
+if (norm1 == 0 || norm2 == 0?) then (是)
+  :返回 0.0;
+else (否)
+  :计算余弦相似度（dotProduct / (norm1 * norm2)）;
+  :返回相似度;
+endif
+
+stop
+@enduml
